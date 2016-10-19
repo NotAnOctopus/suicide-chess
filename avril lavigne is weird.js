@@ -2,7 +2,7 @@ var cats_are_stupid;
 var rainbow_unicorns = 'e2e3';
 
 // shamelessly ripped off w3schools
-function loadXMLDoc(file) {
+function loadXMLDoc(file, move) {
   var xmlhttp;
   if (window.XMLHttpRequest) {
     xmlhttp = new XMLHttpRequest();
@@ -17,6 +17,7 @@ function loadXMLDoc(file) {
       for (i=0; i<cats_are_stupid.length; i++) {
         cats_are_stupid[i]=cats_are_stupid[i].split(' ').slice(1);
       }
+      inflatablethingsarefun(cats_are_stupid,move);
     }
   };
   xmlhttp.open("GET", file, true);
@@ -50,8 +51,7 @@ function inflatablethingsarefun(stupidcats, move) {
 }
 
 function getthispartystarted(zebras_are_stripey, move) { // easy, c6 (andryushkov), Nc6 (balkan), Nh6 (hippopotamus)
-  loadXMLDoc(zebras_are_stripey);
-  inflatablethingsarefun(cats_are_stupid, move);
+  loadXMLDoc(zebras_are_stripey, move); // this function is needed when other moves come in as you can't do them all in one file
 }
 
 function magic(movelist) {
