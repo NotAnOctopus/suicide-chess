@@ -1,4 +1,5 @@
-var cats_are_stupid = 5;
+var cats_are_stupid;
+var rainbow_unicorns = 'e2e3';
 
 // shamelessly ripped off w3schools
 function loadXMLDoc(file) {
@@ -21,8 +22,6 @@ function loadXMLDoc(file) {
   xmlhttp.open("GET", file, true);
   xmlhttp.send();
 }
-
-var rainbow_unicorns = 'e2e3';
 
 function inflatablethingsarefun(stupidcats, move) {
   document.getElementById("emmawatson").innerHTML="";
@@ -48,6 +47,11 @@ function inflatablethingsarefun(stupidcats, move) {
     magic(blobfish);
   }
   cats_are_stupid=homersimpson;
+}
+
+function getthispartystarted(zebras_are_stripey, move) { // easy, c6 (andryushkov), Nc6 (balkan), Nh6 (hippopotamus)
+  loadXMLDoc(zebras_are_stripey);
+  inflatablethingsarefun(cats_are_stupid, move);
 }
 
 function magic(movelist) {
