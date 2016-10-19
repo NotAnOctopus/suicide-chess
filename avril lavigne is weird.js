@@ -12,24 +12,56 @@ function loadXMLDoc(file) {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       cats_are_stupid = this.responseText;
-      // document.getElementById("bananas").innerHTML = cats_are_stupid;
       cats_are_stupid=cats_are_stupid.split('\n');
+      for (i=0; i<cats_are_stupid.length; i++) {
+        cats_are_stupid[i]=cats_are_stupid[i].split(' ').slice(1);
+      }
     }
   };
   xmlhttp.open("GET", file, true);
   xmlhttp.send();
 }
 
-function thingy() {
-  document.getElementById("bananas").innerHTML = cats_are_stupid;
-}
+var rainbow_unicorns = 'e2e3';
 
-function cookie_clicker(move) {
-  var homer_simpson = '';
-  for (var k=0; k<cats_are_stupid.length; k++) {
-    if (cats_are_stupid[k].startsWith('e2e3 '+move)) {
-      homer_simpson+=cats_are_stupid[k]+'<br>';
+function inflatablethingsarefun(stupidcats, move) {
+  document.getElementById("emmawatson").innerHTML="";
+  rainbow_unicorns += ' ' + move;
+  document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns;
+  homersimpson=[];
+  for (apples=0; apples<stupidcats.length; apples++) {
+    if (stupidcats[apples][0] == move) {
+      homersimpson.push(stupidcats[apples].slice(1));
     }
   }
-  document.getElementById('bananas').innerHTML = homer_simpson;
+  if (homersimpson[0].length==0) {
+    document.getElementById("something").innerHTML = "nothing to see here";
+  }
+  else {
+    blobfish=[homersimpson[0][0]];
+    for (butt=1; butt<homersimpson.length; butt++) {
+      if (homersimpson[butt][0] != homersimpson[butt-1][0]) {
+        blobfish.push(homersimpson[butt][0]);
+      }
+    }
+    document.getElementById("something").innerHTML = "Available moves: " + blobfish;
+    magic(blobfish);
+  }
+  cats_are_stupid=homersimpson;
+}
+
+function magic(movelist) {
+  for (n=0; n<movelist.length; n++) {
+    var potato=movelist[n];
+    var butter=document.createElement("BUTTON");
+    var margarine=document.createTextNode(potato);
+    butter.onclick = function (yourface) {
+      return function () {
+        inflatablethingsarefun(cats_are_stupid,yourface);
+      };
+    }(potato);
+    butter.appendChild(margarine);
+    lasers_are_cool = document.getElementById("emmawatson");
+    lasers_are_cool.appendChild(butter);
+  }
 }
