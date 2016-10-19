@@ -1,5 +1,5 @@
 var cats_are_stupid;
-var rainbow_unicorns = 'e2e3';
+var rainbow_unicorns = ['e2e3'];
 
 // shamelessly ripped off w3schools
 function loadXMLDoc(file, move) {
@@ -26,7 +26,7 @@ function loadXMLDoc(file, move) {
 
 function inflatablethingsarefun(stupidcats, move) {
   document.getElementById("emmawatson").innerHTML="";
-  rainbow_unicorns += ' ' + move;
+  rainbow_unicorns.push(move);
   document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns;
   homersimpson=[];
   for (apples=0; apples<stupidcats.length; apples++) {
@@ -44,7 +44,7 @@ function inflatablethingsarefun(stupidcats, move) {
         blobfish.push(homersimpson[butt][0]);
       }
     }
-    document.getElementById("something").innerHTML = "Available moves: " + blobfish;
+    document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + blobfish;
     magic(blobfish);
   }
   cats_are_stupid=homersimpson;
