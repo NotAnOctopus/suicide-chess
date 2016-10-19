@@ -100,3 +100,29 @@ function badgerbadgerbadger() { // mushroom mushroom
   badger('balkan.txt', 'b8c6', 'Nc6');
   badger('easy.txt', 'g8f6', 'Nf6');
 }
+
+// not implemented yet
+var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "........".split(""), "pppppppp".split(""), "rnbqkbnr".split("")]
+
+function display() {
+  stupidvariablename="";
+  for (z=0; z<8; z++) {
+    stupidvariablename+=chessboard[z].join("");
+    stupidvariablename+='<br>';
+  }
+  document.getElementById('chessboard').innerHTML = stupidvariablename;
+}
+
+function someone_buy_me_a_gopro(move) {
+  var uno = 8-move.charAt(1);
+  var dos = move.charCodeAt(0)-97;
+  var tres = 8-move.charAt(3);
+  var catorce = move.charCodeAt(2)-97; // u2 can't count in spanish
+  // turn it up loud, captain
+  var piece = chessboard[uno][dos];
+  // if (en poisson) {do that}
+  // else if (pawn promotion) {do that} else
+  chessboard[tres][catorce] = piece;
+  chessboard[uno][dos] = '.';
+  display();
+}
