@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+#chessboard {
+  font-family: "Courier New";
+  font-size: 36px;
+  font-weight: bold;
+}
+</style>
 </head>
 <body>
 <h2>suicide chess opening book browser</h2>
 <p>this thingy is supposed to be an implementation of mark watkins's solution to suicide chess, where white wins with 1.e3. for each move by black it gives a winning move by white, until it becomes trivial to solve (tree size under 1000 nodes)</p>
+<br>
+<p id="chessboard">board goes here</p>
 <br>
 <p id="spinning_around_on_office_chairs_is_cool">Move list: e2e3</p>
 <br>
