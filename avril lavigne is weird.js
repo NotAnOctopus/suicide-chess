@@ -15,7 +15,7 @@ function loadXMLDoc(file, move) {
       cats_are_stupid = this.responseText;
       cats_are_stupid=cats_are_stupid.split('\n');
       for (i=0; i<cats_are_stupid.length; i++) {
-        cats_are_stupid[i]=cats_are_stupid[i].split(' ').slice(1);
+        cats_are_stupid[i]=cats_are_stupid[i].split(' ');
       }
       inflatablethingsarefun(cats_are_stupid,move);
     }
@@ -102,6 +102,7 @@ function badgerbadgerbadger() { // restarts the search
   badger('easy.txt', 'b8a6', 'Na6');
   badger('balkan.txt', 'b8c6', 'Nc6');
   badger('easy.txt', 'g8f6', 'Nf6');
+  badger('hippopotamus.txt', 'g8h6', 'Nh6');
   // mushroom mushroom
 }
 
