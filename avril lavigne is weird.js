@@ -1,5 +1,65 @@
-// put this in a file later
-var cats_are_stupid = ['g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2a1 wildboar/Bxa1.txt',
+var cats_are_stupid;
+var rainbow_unicorns = ['e2e3'];
+var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")];
+
+// shamelessly ripped off w3schools
+function loadXMLDoc(file, move) {
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      cats_are_stupid = this.responseText;
+      cats_are_stupid=cats_are_stupid.split('\n');
+      for (i=0; i<cats_are_stupid.length; i++) {
+        cats_are_stupid[i]=cats_are_stupid[i].split(' ');
+      }
+      inflatablethingsarefun(cats_are_stupid,move);
+    }
+  };
+  xmlhttp.open("GET", file, true);
+  xmlhttp.send();
+}
+
+function inflatablethingsarefun(stupidcats, move) {
+  document.getElementById("emmawatson").innerHTML="";
+  rainbow_unicorns.push(move);
+  document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns;
+  homersimpson=[];
+  for (apples=0; apples<stupidcats.length; apples++) {
+    if (stupidcats[apples][0] == move) {
+      homersimpson.push(stupidcats[apples].slice(1));
+    }
+  }
+  if (homersimpson[0].length==0) {
+    document.getElementById("something").innerHTML = "nothing to see here";
+  }
+  else if (homersimpson.length == 1 && homersimpson[0].length==1 && homersimpson[0][0].endsWith('t')) {
+    rainbow_unicorns.pop(); // fixes parity bug
+    loadXMLDoc(homersimpson[0][0], move);
+  }
+  else {
+    blobfish=[homersimpson[0][0]];
+    for (butt=1; butt<homersimpson.length; butt++) {
+      if (homersimpson[butt][0] != homersimpson[butt-1][0]) {
+        blobfish.push(homersimpson[butt][0]);
+      }
+    }
+    document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + blobfish;
+    magic(blobfish);
+  }
+  cats_are_stupid=homersimpson;
+  someone_buy_me_a_gopro(move);
+}
+
+function getthispartystarted(zebras_are_stripey, move) {
+  if (move == 'g7g5' || move == 'b7b5') { // wild boar, classical, modern, polish, liardet
+    // put this in a file later
+    cats_are_stupid = ['g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2a1 wildboar/Bxa1.txt',
 'g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2c1 wildboar/Bxc1.txt',
 'g7g5 f1a6 b8a6 d1h5 g8h6 wildboar/qh5sideline.txt',
 'g7g5 f1a6 b8a6 d1h5 f8h6 wildboar/qh5sideline.txt',
@@ -65,69 +125,9 @@ var cats_are_stupid = ['g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2a1 wildboar/Bx
 'b7b5 f1b5 a7a5 classical/easy.txt',
 'b7b5 f1b5 a7a6 classical/easy.txt',
 'b7b5 f1b5 b8a6 classical/easy.txt'];
-
-for (i=0; i<cats_are_stupid.length; i++) {
-  cats_are_stupid[i]=cats_are_stupid[i].split(' ');
-}
-
-var rainbow_unicorns = ['e2e3'];
-var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")];
-
-// shamelessly ripped off w3schools
-function loadXMLDoc(file, move) {
-  var xmlhttp;
-  if (window.XMLHttpRequest) {
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    // code for older browsers
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      cats_are_stupid = this.responseText;
-      cats_are_stupid=cats_are_stupid.split('\n');
-      for (i=0; i<cats_are_stupid.length; i++) {
-        cats_are_stupid[i]=cats_are_stupid[i].split(' ');
-      }
-      inflatablethingsarefun(cats_are_stupid,move);
+    for (i=0; i<cats_are_stupid.length; i++) {
+      cats_are_stupid[i]=cats_are_stupid[i].split(' ');
     }
-  };
-  xmlhttp.open("GET", file, true);
-  xmlhttp.send();
-}
-
-function inflatablethingsarefun(stupidcats, move) {
-  document.getElementById("emmawatson").innerHTML="";
-  rainbow_unicorns.push(move);
-  document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns;
-  homersimpson=[];
-  for (apples=0; apples<stupidcats.length; apples++) {
-    if (stupidcats[apples][0] == move) {
-      homersimpson.push(stupidcats[apples].slice(1));
-    }
-  }
-  if (homersimpson[0].length==0) {
-    document.getElementById("something").innerHTML = "nothing to see here";
-  }
-  else if (homersimpson.length == 1 && homersimpson[0].length==1 && homersimpson[0][0].endsWith('t')) {
-    loadXMLDoc(homersimpson[0][0], move);
-  }
-  else {
-    blobfish=[homersimpson[0][0]];
-    for (butt=1; butt<homersimpson.length; butt++) {
-      if (homersimpson[butt][0] != homersimpson[butt-1][0]) {
-        blobfish.push(homersimpson[butt][0]);
-      }
-    }
-    document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + blobfish;
-    magic(blobfish);
-  }
-  cats_are_stupid=homersimpson;
-  someone_buy_me_a_gopro(move);
-}
-
-function getthispartystarted(zebras_are_stripey, move) {
-  if (move == 'g7g5' || move == 'b7b5') { // wild boar, classical, modern, polish, liardet
     inflatablethingsarefun(cats_are_stupid,move);
   }
   else { // easy 15
@@ -151,65 +151,6 @@ function magic(movelist) {
   }
   // move the doc.something = move for black/white to here
 }
-
-/* none of this is needed anymore
-
-// TODO: rewrite the magic function to cover this case (and others)
-function specialmagic(movelist) { // g5 when text doc not called yet
-  for (n=0; n<movelist.length; n++) {
-    var potato=movelist[n];
-    var butter=document.createElement("BUTTON");
-    var margarine=document.createTextNode(potato);
-    butter.onclick = function (yourface) {
-      return function () {
-        wildboar(yourface);
-      };
-    }(potato);
-    butter.appendChild(margarine);
-    lasers_are_cool = document.getElementById("emmawatson");
-    lasers_are_cool.appendChild(butter);
-  }
-  document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + movelist;
-}
-
-// there has got to be a better way of doing this!
-function wildboar(someone_please_hire_me) {
-  document.getElementById("emmawatson").innerHTML = "";
-  rainbow_unicorns.push(someone_please_hire_me);
-  someone_buy_me_a_gopro(someone_please_hire_me);
-  document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns;
-  if (rainbow_unicorns.length == 2) { specialmagic(['f1a6']); }
-  else if (rainbow_unicorns.length == 3) { specialmagic(['b8a6','b7a6']); }
-  else if (rainbow_unicorns.length == 4) {
-    if (someone_please_hire_me == 'b7a6') {
-      loadXMLDoc('wildboar/bxa6.txt', 'b7a6');
-    }
-    else { // 2...Nxa6
-      specialmagic(['d1h5']);
-    }
-  }
-  else if (rainbow_unicorns.length == 5) {
-    specialmagic(['f8g7','g8h6','f8h6','a6b4','g5g4','c7c5','a6b8']);
-  }
-  else if (rainbow_unicorns.length == 6) {
-    if (someone_please_hire_me != 'f8g7') {
-      loadXMLDoc('wildboar/qh5sideline.txt', someone_please_hire_me);
-    }
-    else { // 3...Bg7
-      specialmagic(['h5h7']);
-    }
-  }
-  else if (rainbow_unicorns.length == 7) { specialmagic(['g7b2']); }
-  else if (rainbow_unicorns.length == 8) { specialmagic(['h7h8']); }
-  else if (rainbow_unicorns.length == 9) { specialmagic(['b2a1','b2c1']); }
-  else if (someone_please_hire_me == 'b2a1') { // 5...Bxa1
-    loadXMLDoc('wildboar/Bxa1.txt', 'b2a1');
-  }
-  else { // 5...Bxc1
-    loadXMLDoc('wildboar/Bxc1.txt', 'b2c1');
-  }
-}
-*/
 
 function badger(thing, thingy, thingything) { // this helps the function below restart the search
   var butter=document.createElement("BUTTON");
