@@ -1,5 +1,73 @@
-var cats_are_stupid;
+// put this in a file later
+var cats_are_stupid = ['g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2a1 wildboar/Bxa1.txt',
+'g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2c1 wildboar/Bxc1.txt',
+'g7g5 f1a6 b8a6 d1h5 g8h6 wildboar/qh5sideline.txt',
+'g7g5 f1a6 b8a6 d1h5 f8h6 wildboar/qh5sideline.txt',
+'g7g5 f1a6 b8a6 d1h5 a6b4 wildboar/qh5sideline.txt',
+'g7g5 f1a6 b8a6 d1h5 g5g4 wildboar/qh5sideline.txt',
+'g7g5 f1a6 b8a6 d1h5 c7c5 wildboar/qh5sideline.txt',
+'g7g5 f1a6 b8a6 d1h5 a6b8 wildboar/qh5sideline.txt',
+'g7g5 f1a6 b7a6 wildboar/bxa6.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e7e5 a3f8 d7f8 classical/knighttakes.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e7e5 a3f8 e8f8 classical/kingtakes.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 g8h6 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 d7c5 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 d7b8 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8a6 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8a7 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e8d8 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8d8 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 f7f6 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8c8 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 c7c6 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e7e6 classical/oranges.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 g8h6 classical/blahblah.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a8d8 classical/blahblah.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 d7b8 classical/blahblah.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 c7c5 classical/blahblah.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 f7f6 classical/blahblah.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 h7h6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 a8b8 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g7g6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d7b6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d7b8 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 h7h5 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8c8 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g8f6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 a8c8 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 c7c6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g8h6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 f7f6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 f7f5 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g7g5 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 a7a6 classical/whatever.txt',
+'b7b5 f1b5 c8a6 b5d7 d8d7 classical/bishopqxd7.txt',
+'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 d8h4 classical/classicalqh4.txt',
+'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 c7c6 classical/otherthing.txt',
+'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 d7c8 classical/otherthing.txt',
+'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 b8c6 classical/otherthing.txt',
+'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 d8g5 classical/otherthing.txt',
+'b7b5 f1b5 e7e6 b5d7 b8d7 classical/thingy.txt',
+'b7b5 f1b5 e7e6 b5d7 d8d7 classical/thingy.txt',
+'b7b5 f1b5 e7e6 b5d7 e8d7 classical/thingy.txt',
+'b7b5 f1b5 g8h6 classical/easy.txt',
+'b7b5 f1b5 c7c6 classical/easy.txt',
+'b7b5 f1b5 g7g5 classical/easy.txt',
+'b7b5 f1b5 c7c5 classical/easy.txt',
+'b7b5 f1b5 c8b7 classical/easy.txt',
+'b7b5 f1b5 f7f5 classical/easy.txt',
+'b7b5 f1b5 e7e5 classical/easy.txt',
+'b7b5 f1b5 h7h5 classical/easy.txt',
+'b7b5 f1b5 f7f6 classical/easy.txt',
+'b7b5 f1b5 h7h6 classical/easy.txt',
+'b7b5 f1b5 g8f6 classical/easy.txt',
+'b7b5 f1b5 g7g6 classical/easy.txt',
+'b7b5 f1b5 a7a5 classical/easy.txt',
+'b7b5 f1b5 a7a6 classical/easy.txt',
+'b7b5 f1b5 b8a6 classical/easy.txt'];
+
 var rainbow_unicorns = ['e2e3'];
+var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")];
 
 // shamelessly ripped off w3schools
 function loadXMLDoc(file, move) {
@@ -37,6 +105,9 @@ function inflatablethingsarefun(stupidcats, move) {
   if (homersimpson[0].length==0) {
     document.getElementById("something").innerHTML = "nothing to see here";
   }
+  else if (homersimpson.length == 1 && homersimpson[0].length==1 && homersimpson[0][0].endsWith('t')) {
+    loadXMLDoc(homersimpson[0][0], move);
+  }
   else {
     blobfish=[homersimpson[0][0]];
     for (butt=1; butt<homersimpson.length; butt++) {
@@ -52,11 +123,11 @@ function inflatablethingsarefun(stupidcats, move) {
 }
 
 function getthispartystarted(zebras_are_stripey, move) {
-  if (move == 'g7g5') { // wild boar attack
-    wildboar('g7g5');
+  if (move == 'g7g5' || move == 'b7b5') { // wild boar, classical, modern, polish, liardet
+    inflatablethingsarefun(cats_are_stupid,move);
   }
-  else {
-    loadXMLDoc(zebras_are_stripey, move); // easy 15
+  else { // easy 15
+    loadXMLDoc(zebras_are_stripey, move);
   }
 }
 
@@ -76,6 +147,8 @@ function magic(movelist) {
   }
   // move the doc.something = move for black/white to here
 }
+
+/* none of this is needed anymore
 
 // TODO: rewrite the magic function to cover this case (and others)
 function specialmagic(movelist) { // g5 when text doc not called yet
@@ -132,6 +205,7 @@ function wildboar(someone_please_hire_me) {
     loadXMLDoc('wildboar/Bxc1.txt', 'b2c1');
   }
 }
+*/
 
 function badger(thing, thingy, thingything) { // this helps the function below restart the search
   var butter=document.createElement("BUTTON");
@@ -168,8 +242,6 @@ function badgerbadgerbadger() { // restarts the search
   badger('hippopotamus.txt', 'g8h6', 'Nh6');
   // mushroom mushroom
 }
-
-var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")]
 
 function display() {
   stupidvariablename="";
