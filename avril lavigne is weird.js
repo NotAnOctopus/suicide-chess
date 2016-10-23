@@ -51,8 +51,13 @@ function inflatablethingsarefun(stupidcats, move) {
   someone_buy_me_a_gopro(move);
 }
 
-function getthispartystarted(zebras_are_stripey, move) { // easy, c6 (andryushkov), Nc6 (balkan), Nh6 (hippopotamus)
-  loadXMLDoc(zebras_are_stripey, move); // this function is needed when other moves come in as you can't do them all in one file
+function getthispartystarted(zebras_are_stripey, move) {
+  if (move == 'g7g5') { // wild boar attack
+    wildboar('g7g5');
+  }
+  else {
+    loadXMLDoc(zebras_are_stripey, move); // easy 15
+  }
 }
 
 function magic(movelist) {
@@ -68,6 +73,63 @@ function magic(movelist) {
     butter.appendChild(margarine);
     lasers_are_cool = document.getElementById("emmawatson");
     lasers_are_cool.appendChild(butter);
+  }
+  // move the doc.something = move for black/white to here
+}
+
+// TODO: rewrite the magic function to cover this case (and others)
+function specialmagic(movelist) { // g5 when text doc not called yet
+  for (n=0; n<movelist.length; n++) {
+    var potato=movelist[n];
+    var butter=document.createElement("BUTTON");
+    var margarine=document.createTextNode(potato);
+    butter.onclick = function (yourface) {
+      return function () {
+        wildboar(yourface);
+      };
+    }(potato);
+    butter.appendChild(margarine);
+    lasers_are_cool = document.getElementById("emmawatson");
+    lasers_are_cool.appendChild(butter);
+  }
+  document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + movelist;
+}
+
+// there has got to be a better way of doing this!
+function wildboar(someone_please_hire_me) {
+  document.getElementById("emmawatson").innerHTML = "";
+  rainbow_unicorns.push(someone_please_hire_me);
+  someone_buy_me_a_gopro(someone_please_hire_me);
+  document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns;
+  if (rainbow_unicorns.length == 2) { specialmagic(['f1a6']); }
+  else if (rainbow_unicorns.length == 3) { specialmagic(['b8a6','b7a6']); }
+  else if (rainbow_unicorns.length == 4) {
+    if (someone_please_hire_me == 'b7a6') {
+      loadXMLDoc('wildboar/bxa6.txt', 'b7a6');
+    }
+    else { // 2...Nxa6
+      specialmagic(['d1h5']);
+    }
+  }
+  else if (rainbow_unicorns.length == 5) {
+    specialmagic(['f8g7','g8h6','f8h6','a6b4','g5g4','c7c5','a6b8']);
+  }
+  else if (rainbow_unicorns.length == 6) {
+    if (someone_please_hire_me != 'f8g7') {
+      loadXMLDoc('wildboar/qh5sideline.txt', someone_please_hire_me);
+    }
+    else { // 3...Bg7
+      specialmagic(['h5h7']);
+    }
+  }
+  else if (rainbow_unicorns.length == 7) { specialmagic(['g7b2']); }
+  else if (rainbow_unicorns.length == 8) { specialmagic(['h7h8']); }
+  else if (rainbow_unicorns.length == 9) { specialmagic(['b2a1','b2c1']); }
+  else if (someone_please_hire_me == 'b2a1') { // 5...Bxa1
+    loadXMLDoc('wildboar/Bxa1.txt', 'b2a1');
+  }
+  else { // 5...Bxc1
+    loadXMLDoc('wildboar/Bxc1.txt', 'b2c1');
   }
 }
 
@@ -97,6 +159,7 @@ function badgerbadgerbadger() { // restarts the search
   badger('easy.txt', 'f7f5', 'f5');
   badger('easy.txt', 'f7f6', 'f6');
   badger('easy.txt', 'g7g6', 'g6');
+  badger('', 'g7g5', 'g5');
   badger('easy.txt', 'h7h5', 'h5');
   badger('easy.txt', 'h7h6', 'h6');
   badger('easy.txt', 'b8a6', 'Na6');
@@ -138,7 +201,7 @@ function someone_buy_me_a_gopro(move) { // changes the board
   } else if (move.length==5 && tres==7 && chessboard[uno][dos]=='P') { // black promotion
     chessboard[tres][catorce]=move.charAt(4).toUpperCase();
     chessboard[uno][dos]='.';
-  } else {
+  } else if (piece != '.') { // others (checks to see if move not already made)
     chessboard[tres][catorce] = piece;
     chessboard[uno][dos] = '.';
   }
