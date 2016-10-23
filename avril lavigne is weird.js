@@ -66,6 +66,10 @@ var cats_are_stupid = ['g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2a1 wildboar/Bx
 'b7b5 f1b5 a7a6 classical/easy.txt',
 'b7b5 f1b5 b8a6 classical/easy.txt'];
 
+for (i=0; i<cats_are_stupid.length; i++) {
+  cats_are_stupid[i]=cats_are_stupid[i].split(' ');
+}
+
 var rainbow_unicorns = ['e2e3'];
 var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")];
 
