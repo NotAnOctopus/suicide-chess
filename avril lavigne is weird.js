@@ -2,8 +2,8 @@ var cats_are_stupid;
 var rainbow_unicorns = ['e2e3'];
 var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")];
 
-// shamelessly ripped off w3schools
-function loadXMLDoc(file, move) {
+// loadXMLDoc function shamelessly ripped off w3schools
+function getthispartystarted(file, move) {
   var xmlhttp;
   if (window.XMLHttpRequest) {
     xmlhttp = new XMLHttpRequest();
@@ -41,7 +41,7 @@ function inflatablethingsarefun(stupidcats, move) {
   }
   else if (homersimpson.length == 1 && homersimpson[0].length==1 && homersimpson[0][0].endsWith('t')) {
     rainbow_unicorns.pop(); // fixes parity bug
-    loadXMLDoc(homersimpson[0][0], move);
+    getthispartystarted(homersimpson[0][0], move);
   }
   else {
     blobfish=[homersimpson[0][0]];
@@ -56,15 +56,6 @@ function inflatablethingsarefun(stupidcats, move) {
   }
   cats_are_stupid=homersimpson;
   someone_buy_me_a_gopro(move);
-}
-
-function getthispartystarted(zebras_are_stripey, move) {
-  if (move == 'g7g5' || move == 'b7b5' || move == 'e7e6' || move == 'c7c5' || move == 'b7b6') { // wild boar, classical, modern, polish, liardet
-    loadXMLDoc('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', move);
-  }
-  else { // easy 15
-    loadXMLDoc(zebras_are_stripey, move);
-  }
 }
 
 function magic(movelist) {
@@ -105,13 +96,13 @@ function badgerbadgerbadger() { // restarts the search
   display();
   badger('easy.txt', 'a7a5', 'a5');
   badger('easy.txt', 'a7a6', 'a6');
-  badger('', 'b7b5', 'b5');
+  badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'b7b5', 'b5');
   badger('andryushkov.txt', 'c7c6', 'c6');
   badger('easy.txt', 'e7e5', 'e5');
   badger('easy.txt', 'f7f5', 'f5');
   badger('easy.txt', 'f7f6', 'f6');
   badger('easy.txt', 'g7g6', 'g6');
-  badger('', 'g7g5', 'g5');
+  badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'g7g5', 'g5');
   badger('easy.txt', 'h7h5', 'h5');
   badger('easy.txt', 'h7h6', 'h6');
   badger('easy.txt', 'b8a6', 'Na6');
