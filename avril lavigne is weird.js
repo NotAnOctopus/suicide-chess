@@ -37,6 +37,7 @@ function inflatablethingsarefun(stupidcats, move) {
   }
   if (homersimpson[0].length==0) {
     document.getElementById("something").innerHTML = "nothing to see here";
+    document.getElementById("emmawatson").innerHTML="";
   }
   else if (homersimpson.length == 1 && homersimpson[0].length==1 && homersimpson[0][0].endsWith('t')) {
     rainbow_unicorns.pop(); // fixes parity bug
@@ -50,6 +51,7 @@ function inflatablethingsarefun(stupidcats, move) {
       }
     }
     document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + blobfish;
+    document.getElementById("emmawatson").innerHTML="";
     magic(blobfish);
   }
   cats_are_stupid=homersimpson;
@@ -57,78 +59,8 @@ function inflatablethingsarefun(stupidcats, move) {
 }
 
 function getthispartystarted(zebras_are_stripey, move) {
-  if (move == 'g7g5' || move == 'b7b5') { // wild boar, classical, modern, polish, liardet
-    // put this in a file later
-    cats_are_stupid = ['g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2a1 wildboar/Bxa1.txt',
-'g7g5 f1a6 b8a6 d1h5 f8g7 h5h7 g7b2 h7h8 b2c1 wildboar/Bxc1.txt',
-'g7g5 f1a6 b8a6 d1h5 g8h6 wildboar/qh5sideline.txt',
-'g7g5 f1a6 b8a6 d1h5 f8h6 wildboar/qh5sideline.txt',
-'g7g5 f1a6 b8a6 d1h5 a6b4 wildboar/qh5sideline.txt',
-'g7g5 f1a6 b8a6 d1h5 g5g4 wildboar/qh5sideline.txt',
-'g7g5 f1a6 b8a6 d1h5 c7c5 wildboar/qh5sideline.txt',
-'g7g5 f1a6 b8a6 d1h5 a6b8 wildboar/qh5sideline.txt',
-'g7g5 f1a6 b7a6 wildboar/bxa6.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e7e5 a3f8 d7f8 classical/apples.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e7e5 a3f8 e8f8 classical/bananas.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 g8h6 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 d7c5 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 d7b8 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8a6 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8a7 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e8d8 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8d8 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 f7f6 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 a8c8 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 c7c6 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a7a5 b2a3 e7e6 classical/cherries.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 g8h6 classical/grapefruits.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 a8d8 classical/grapefruits.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 d7b8 classical/grapefruits.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 c7c5 classical/grapefruits.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8b8 d3h7 h8h7 b1c3 h7h2 h1h2 b8b2 c1b2 f7f6 classical/grapefruits.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 h7h6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 a8b8 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g7g6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d7b6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d7b8 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 h7h5 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 d8c8 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g8f6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 a8c8 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 c7c6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g8h6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 f7f6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 f7f5 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 g7g5 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 b8d7 d2d3 a6d3 d1d3 a7a6 classical/lemons.txt',
-'b7b5 f1b5 c8a6 b5d7 d8d7 classical/mangoes.txt',
-'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 d8h4 classical/peaches.txt',
-'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 c7c6 classical/pears.txt',
-'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 d7c8 classical/pears.txt',
-'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 b8c6 classical/pears.txt',
-'b7b5 f1b5 e7e6 b5d7 c8d7 b1a3 f8a3 b2a3 d8g5 classical/pears.txt',
-'b7b5 f1b5 e7e6 b5d7 b8d7 classical/pineapples.txt',
-'b7b5 f1b5 e7e6 b5d7 d8d7 classical/pineapples.txt',
-'b7b5 f1b5 e7e6 b5d7 e8d7 classical/pineapples.txt',
-'b7b5 f1b5 g8h6 classical/strawberries.txt',
-'b7b5 f1b5 c7c6 classical/strawberries.txt',
-'b7b5 f1b5 g7g5 classical/strawberries.txt',
-'b7b5 f1b5 c7c5 classical/strawberries.txt',
-'b7b5 f1b5 c8b7 classical/strawberries.txt',
-'b7b5 f1b5 f7f5 classical/strawberries.txt',
-'b7b5 f1b5 e7e5 classical/strawberries.txt',
-'b7b5 f1b5 h7h5 classical/strawberries.txt',
-'b7b5 f1b5 f7f6 classical/strawberries.txt',
-'b7b5 f1b5 h7h6 classical/strawberries.txt',
-'b7b5 f1b5 g8f6 classical/strawberries.txt',
-'b7b5 f1b5 g7g6 classical/strawberries.txt',
-'b7b5 f1b5 a7a5 classical/strawberries.txt',
-'b7b5 f1b5 a7a6 classical/strawberries.txt',
-'b7b5 f1b5 b8a6 classical/strawberries.txt'];
-    for (i=0; i<cats_are_stupid.length; i++) {
-      cats_are_stupid[i]=cats_are_stupid[i].split(' ');
-    }
-    inflatablethingsarefun(cats_are_stupid,move);
+  if (move == 'g7g5' || move == 'b7b5' || move == 'e7e6' || move == 'c7c5' || move == 'b7b6') { // wild boar, classical, modern, polish, liardet
+    loadXMLDoc('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', move);
   }
   else { // easy 15
     loadXMLDoc(zebras_are_stripey, move);
