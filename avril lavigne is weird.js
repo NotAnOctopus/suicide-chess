@@ -97,8 +97,14 @@ function badgerbadgerbadger() { // restarts the search
   badger('easy.txt', 'a7a5', 'a5');
   badger('easy.txt', 'a7a6', 'a6');
   badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'b7b5', 'b5');
+  // badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'b7b6', 'b6');
+  // badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'c7c5', 'c5');
   badger('andryushkov.txt', 'c7c6', 'c6');
+  // badger('easy.txt', 'd7d5', 'd5');
+  // badger('easy.txt', 'd7d6', 'd6');
   badger('easy.txt', 'e7e5', 'e5');
+  badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'e7e6', 'e6');
+  // mushroom mushroom
   badger('easy.txt', 'f7f5', 'f5');
   badger('easy.txt', 'f7f6', 'f6');
   badger('easy.txt', 'g7g6', 'g6');
@@ -109,7 +115,7 @@ function badgerbadgerbadger() { // restarts the search
   badger('balkan.txt', 'b8c6', 'Nc6');
   badger('easy.txt', 'g8f6', 'Nf6');
   badger('hippopotamus.txt', 'g8h6', 'Nh6');
-  // mushroom mushroom
+  // aagh! snake! aagh! SNAKE! oh it's a snake!
 }
 
 function display() {
