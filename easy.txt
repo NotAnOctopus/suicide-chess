@@ -494,5 +494,5 @@ g8f6 f1a6 b7a6 e3e4 f6e4 d1h5 e4d2 h5h7 h8h7 e1d2 h7h2 h1h2 c7c6 b1c3
 g8f6 f1a6 b7a6 e3e4 f6e4 d1h5 e4d2 h5h7 h8h7 e1d2 h7h2 h1h2 b8c6 a2a4
 g8f6 f1a6 b7a6 e3e4 f6e4 d1h5 e4d2 h5h7 h8h7 e1d2 h7h2 h1h2 c7c5 b2b4 c5b4 c1a3 b4a3 b1a3 a6a5 d2c3 a5a4 a1c1
 b8a6 f1a6 b7a6 d1e2 c8b7 e2a6 b7g2 a6a7 g2h1 a7c7 d8c7 e3e4 c7c2 d2d4
-d7d5
-d7d6
+d7d5 d1g4
+d7d6 d1g4
