@@ -1,56 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p {
-  font-family: Calibri;
-}
-h2 {
-  font-family: Calibri;
-  font-weight: bold;
-  color: green;
-}
-td {
-  border: 1px solid black;
-  padding: 0px;
-  height: 60px;
-  width: 60px;
-}
-.blobfishxw, .blobfishRw, .blobfishNw, .blobfishBw, .blobfishQw, .blobfishKw, .blobfishPw, .blobfishrw, .blobfishnw, .blobfishbw, .blobfishqw, .blobfishkw, .blobfishpw, .blobfishxd, .blobfishRd, .blobfishNd, .blobfishBd, .blobfishQd, .blobfishKd, .blobfishPd, .blobfishrd, .blobfishnd, .blobfishbd, .blobfishqd, .blobfishkd, .blobfishpd {
-  background-image:url("chess%20pieces.png");
-  width: 60px;
-  height: 60px;
-}
-.blobfishxw { background-position:0px 0px; }
-.blobfishkw { background-position:-60px 0px; }
-.blobfishqw { background-position:-120px 0px; }
-.blobfishrw { background-position:-180px 0px; }
-.blobfishbw { background-position:-240px 0px; }
-.blobfishnw { background-position:-300px 0px; }
-.blobfishpw { background-position:-360px 0px; }
-.blobfishKw { background-position:-420px 0px; }
-.blobfishQw { background-position:-480px 0px; }
-.blobfishRw { background-position:-540px 0px; }
-.blobfishBw { background-position:-600px 0px; }
-.blobfishNw { background-position:-660px 0px; }
-.blobfishPw { background-position:-720px 0px; }
-.blobfishxd { background-position:0px 60px; }
-.blobfishkd { background-position:-60px 60px; }
-.blobfishqd { background-position:-120px 60px; }
-.blobfishrd { background-position:-180px 60px; }
-.blobfishbd { background-position:-240px 60px; }
-.blobfishnd { background-position:-300px 60px; }
-.blobfishpd { background-position:-360px 60px; }
-.blobfishKd { background-position:-420px 60px; }
-.blobfishQd { background-position:-480px 60px; }
-.blobfishRd { background-position:-540px 60px; }
-.blobfishBd { background-position:-600px 60px; }
-.blobfishNd { background-position:-660px 60px; }
-.blobfishPd { background-position:-720px 60px; }
-</style>
+<link rel="stylesheet" type="text/css" href="santa claus is real.css">
 </head>
 <body>
 <h2>suicide chess opening book browser</h2>
+<p>mark watkins recently solved suicide chess (or losing chess or antichess) as a white win with 1. e3.</p>
 <p>this thingy is supposed to be an implementation of mark watkins's solution to suicide chess, where white wins with 1.e3. for each move by black it gives a winning move by white, until it becomes trivial to solve (tree size under 1000 nodes)</p>
 <br>
 <div id="chessboard">
@@ -74,6 +29,8 @@ td {
 <button type="button" onclick="getthispartystarted('easy.txt','a7a6')">a6</button>
 <button type="button" onclick="getthispartystarted('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt','b7b5')">b5</button>
 <button type="button" onclick="getthispartystarted('andryushkov.txt','c7c6')">c6</button>
+<button type="button" onclick="getthispartystarted('easy.txt','d7d5')">d5</button>
+<button type="button" onclick="getthispartystarted('easy.txt','d7d6')">d6</button>
 <button type="button" onclick="getthispartystarted('easy.txt','e7e5')">e5</button>
 <button type="button" onclick="getthispartystarted('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt','e7e6')">e6</button>
 <button type="button" onclick="getthispartystarted('easy.txt','f7f5')">f5</button>
