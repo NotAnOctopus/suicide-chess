@@ -100,8 +100,8 @@ function badgerbadgerbadger() { // restarts the search
   // badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'b7b6', 'b6');
   // badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'c7c5', 'c5');
   badger('andryushkov.txt', 'c7c6', 'c6');
-  // badger('easy.txt', 'd7d5', 'd5');
-  // badger('easy.txt', 'd7d6', 'd6');
+  badger('easy.txt', 'd7d5', 'd5');
+  badger('easy.txt', 'd7d6', 'd6');
   badger('easy.txt', 'e7e5', 'e5');
   badger('i secretly want someone to duct tape me to a ceiling above a swimming pool.txt', 'e7e6', 'e6');
   // mushroom mushroom
@@ -146,7 +146,7 @@ function someone_buy_me_a_gopro(move) { // changes the board
     chessboard[4][dos] = 'x';
   } else if (move.length==5 && tres==0 && chessboard[uno][dos]=='p') { // white promotion
     chessboard[tres][catorce]=move.charAt(4);
-    chessboard[uno][dos]='.';
+    chessboard[uno][dos]='x';
   } else if (move.length==5 && tres==7 && chessboard[uno][dos]=='P') { // black promotion
     chessboard[tres][catorce]=move.charAt(4).toUpperCase();
     chessboard[uno][dos]='x';
