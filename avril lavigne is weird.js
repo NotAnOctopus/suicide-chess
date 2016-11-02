@@ -1,6 +1,6 @@
 var cats_are_stupid;
 var rainbow_unicorns = ['e2e3'];
-var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")];
+var chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "xxxxxxxx".split(""), "xxxxxxxx".split(""), "xxxxxxxx".split(""), "xxxxpxxx".split(""), "ppppxppp".split(""), "rnbqkbnr".split("")];
 
 // loadXMLDoc function shamelessly ripped off w3schools
 function getthispartystarted(file, move) {
@@ -89,7 +89,7 @@ function badger(thing, thingy, thingything) { // this helps the function below r
 function badgerbadgerbadger() { // restarts the search
   cats_are_stupid=[];
   rainbow_unicorns=['e2e3'];
-  chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "........".split(""), "........".split(""), "........".split(""), "....p...".split(""), "pppp.ppp".split(""), "rnbqkbnr".split("")];
+  chessboard=["RNBQKBNR".split(""), "PPPPPPPP".split(""), "xxxxxxxx".split(""), "xxxxxxxx".split(""), "xxxxxxxx".split(""), "xxxxpxxx".split(""), "ppppxppp".split(""), "rnbqkbnr".split("")];
   document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML = "Move list: e2e3";
   document.getElementById("something").innerHTML = "available moves go here";
   document.getElementById("emmawatson").innerHTML = "";
@@ -119,13 +119,15 @@ function badgerbadgerbadger() { // restarts the search
 }
 
 function display() {
-  stupidvariablename="";
+  stupidvariablename=document.getElementById("sixtyfour_slices_of_american_cheese").getElementsByTagName("td");
   for (z=0; z<8; z++) {
-    stupidvariablename+=chessboard[z].join("");
-    stupidvariablename+='<br>';
+    for (y=0; y<8; y++) {
+      stupidvariablename[8*z+y].className = 'blobfish' + chessboard[z][y] + ((y+z)%2==0 ? 'w' : 'd');
+    }
   }
-  document.getElementById('chessboard').innerHTML = stupidvariablename;
 }
+
+display(); // shows board on load
 
 function someone_buy_me_a_gopro(move) { // changes the board
   var uno = 8-move.charAt(1);
@@ -134,23 +136,23 @@ function someone_buy_me_a_gopro(move) { // changes the board
   var catorce = move.charCodeAt(2)-97; // u2 can't count in spanish
   // turn it up loud, captain
   var piece = chessboard[uno][dos];
-  if (piece=='p' && dos!=catorce && uno==3 && tres==2 && chessboard[3][catorce]=='P' && chessboard[2][catorce]=='.') { // white en poisson
+  if (piece=='p' && dos!=catorce && uno==3 && tres==2 && chessboard[3][catorce]=='P' && chessboard[2][catorce]=='x') { // white en poisson
     chessboard[2][catorce] = 'p';
-    chessboard[3][catorce] = '.';
-    chessboard[3][dos] = '.';
-  } else if (piece=='P' && dos!=catorce && uno==4 && tres==5 && chessboard[4][catorce]=='p' && chessboard[5][catorce]=='.') { // black en poisson
+    chessboard[3][catorce] = 'x';
+    chessboard[3][dos] = 'x';
+  } else if (piece=='P' && dos!=catorce && uno==4 && tres==5 && chessboard[4][catorce]=='p' && chessboard[5][catorce]=='x') { // black en poisson
     chessboard[5][catorce] = 'P';
-    chessboard[4][catorce] = '.';
-    chessboard[4][dos] = '.';
+    chessboard[4][catorce] = 'x';
+    chessboard[4][dos] = 'x';
   } else if (move.length==5 && tres==0 && chessboard[uno][dos]=='p') { // white promotion
     chessboard[tres][catorce]=move.charAt(4);
     chessboard[uno][dos]='.';
   } else if (move.length==5 && tres==7 && chessboard[uno][dos]=='P') { // black promotion
     chessboard[tres][catorce]=move.charAt(4).toUpperCase();
-    chessboard[uno][dos]='.';
-  } else if (piece != '.') { // others (checks to see if move not already made)
+    chessboard[uno][dos]='x';
+  } else if (piece != 'x') { // others (checks to see if move not already made)
     chessboard[tres][catorce] = piece;
-    chessboard[uno][dos] = '.';
+    chessboard[uno][dos] = 'x';
   }
   display();
 }
