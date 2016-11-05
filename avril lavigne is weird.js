@@ -69,10 +69,10 @@ function magic(movelist) {
       };
     }(potato);
     butter.appendChild(margarine);
-    var spaghetti_code=document.createTextNode("\n");
+    var so_THIS_is_how_you_insert_a_line_break = document.createElement("br");
     lasers_are_cool = document.getElementById("emmawatson");
     lasers_are_cool.appendChild(butter);
-    lasers_are_cool.appendChild(spaghetti_code);
+    lasers_are_cool.appendChild(so_THIS_is_how_you_insert_a_line_break);
   }
   // move the doc.something = move for black/white to here
 }
@@ -84,10 +84,10 @@ function badger(thing, thingy, thingything) { // this helps the function below r
     getthispartystarted(thing,thingy);
   };
   butter.appendChild(margarine);
-  var why_am_i_doing_this=document.createTextNode("\n");
+  var br = document.createElement("br");
   lasers_are_really_cool = document.getElementById("emmawatson");
   lasers_are_really_cool.appendChild(butter);
-  lasers_are_really_cool.appendChild(why_am_i_doing_this);
+  lasers_are_really_cool.appendChild(br);
 }
 
 function badgerbadgerbadger() { // restarts the search
