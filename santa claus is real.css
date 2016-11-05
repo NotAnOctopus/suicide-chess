@@ -9,8 +9,8 @@ h2 {
 td {
   border: 1px solid black;
   padding: 0px;
-  height: 60px;
-  width: 60px;
+  /* height: 60px; */
+  /* width: 60px; */
 }
 .blobfishxw, .blobfishRw, .blobfishNw, .blobfishBw, .blobfishQw, .blobfishKw, .blobfishPw, .blobfishrw, .blobfishnw, .blobfishbw, .blobfishqw, .blobfishkw, .blobfishpw, .blobfishxd, .blobfishRd, .blobfishNd, .blobfishBd, .blobfishQd, .blobfishKd, .blobfishPd, .blobfishrd, .blobfishnd, .blobfishbd, .blobfishqd, .blobfishkd, .blobfishpd {
   background-image:url("chess%20pieces.png");
