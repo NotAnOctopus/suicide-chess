@@ -71,6 +71,7 @@ function magic(movelist) {
     butter.appendChild(margarine);
     lasers_are_cool = document.getElementById("emmawatson");
     lasers_are_cool.appendChild(butter);
+    lasers_are_cool.innerHTML += "<br>";
   }
   // move the doc.something = move for black/white to here
 }
@@ -84,6 +85,7 @@ function badger(thing, thingy, thingything) { // this helps the function below r
   butter.appendChild(margarine);
   lasers_are_really_cool = document.getElementById("emmawatson");
   lasers_are_really_cool.appendChild(butter);
+  lasers_are_really_cool.innerHTML += "<br>";
 }
 
 function badgerbadgerbadger() { // restarts the search
