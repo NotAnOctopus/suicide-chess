@@ -28,7 +28,7 @@ function getthispartystarted(file, move) {
 function inflatablethingsarefun(stupidcats, move) {
   document.getElementById("emmawatson").innerHTML="Loading...";
   rainbow_unicorns.push(move);
-  document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns;
+  document.getElementById("spinning_around_on_office_chairs_is_cool").innerHTML="Move list: " + rainbow_unicorns.join(' ');
   homersimpson=[];
   for (apples=0; apples<stupidcats.length; apples++) {
     if (stupidcats[apples][0] == move) {
@@ -50,7 +50,7 @@ function inflatablethingsarefun(stupidcats, move) {
         blobfish.push(homersimpson[butt][0]);
       }
     }
-    document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + blobfish;
+    document.getElementById("something").innerHTML = (rainbow_unicorns.length%2==1 ? "Available moves for black: " : "White plays: ") + blobfish.join(', ');
     document.getElementById("emmawatson").innerHTML="";
     magic(blobfish);
   }
