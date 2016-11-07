@@ -3,6 +3,7 @@ import urllib
 sp="C:\PATH_GOES_HERE"
 thingy=urllib.urlopen("http://magma.maths.usyd.edu.au/~watkins/LOSING_CHESS/e3c5.lines") # or another file
 thingy=thingy.read()
+thingy=thingy.split('\n')
 thingy=thingy[:-1] # remove trailing newline
 for thing in range(len(thingy)):
     thingy[thing]=thingy[thing].strip() # there's an extra trailing whitespace at the end of each of the c5 and b6 lines that isn't there in any of the other lines files. THIS WAS SO BLOODY ANNOYING TO FIND. I SPENT FUCKING FOREVER WONDERING WHY MY APPROACH SUDDENLY DIDN'T WORK FOR THE C5 LINES AAAAARGH MARK I HATE YOU
